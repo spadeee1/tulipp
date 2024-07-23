@@ -1,0 +1,130 @@
+body {
+    background-color: #000000;
+    text-align: center;
+    }
+    
+    .tulip-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    
+    .tulip {
+    position: relative;
+    width: 200px;
+    height: 300px;
+    }
+    
+    .petal {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    width: 100px;
+    height: 100px;
+    background-color: #FFC0CB;
+    border-radius: 50%;
+    transform: rotate(45deg);
+    }
+    
+    .stem {
+    position: absolute;
+    bottom: 0;
+    left: 50px;
+    width: 20px;
+    height: 200px;
+    background-color: #32CD32;
+    border-radius: 10px;
+    }
+    
+    .leaf {
+    position: absolute;
+    bottom: 50px;
+    left: -5px;
+    width: 30px;
+    height: 100px;
+    background-color: #32CD32;
+    transform: rotate(-45deg);
+    }
+    
+    .leaf2 {
+    position: absolute;
+    bottom: 50px;
+    right: -50px;
+    left: 90px;
+    width: 30px;
+    height: 100px;
+    background-color: #32CD32;
+    transform: rotate(45deg);
+    }
+    
+    .glow {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 0, 0.5);
+    animation: glow 1s infinite alternate;
+    }
+    
+    @keyframes glow {
+    0% {
+    opacity: 0.2;
+    }
+    100% {
+    opacity: 1;
+    }
+    }
+    
+    .petal {
+    border-radius: 0 0 50% 50%;
+    }
+    
+    .stars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: #000000; /* Set the background color to black */
+    background-image: repeating-linear-gradient(45deg, transparent, transparent 20px, rgba(255, 255, 255, 0.2) 20px, rgba(255, 255, 255, 0.2) 40px),
+                      repeating-linear-gradient(-45deg, transparent, transparent 20px, rgba(255, 255, 255, 0.2) 20px, rgba(255, 255, 255, 0.2) 40px);
+    }
+    
+    .tooltip {
+        visibility: hidden;
+        position: absolute;
+        top: -50px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #f0f0f0;
+        color: #333;
+        padding: 5px;
+        border-radius: 5px;
+        z-index: 1;
+      }
+      
+      .tulip:hover .tooltip {
+        visibility: visible;
+      }
+
+      @import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand&display=swap');
+
+.tooltip {
+  font-family: 'Edu AU VIC WA NT Hand', sans-serif, bold;
+  /* Other styles for the tooltip */
+}
+
+#starCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Ensure it's behind other elements */
+  }
